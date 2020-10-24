@@ -25,3 +25,33 @@ body{
     height: auto;
   }
 
+
+/* HOME PAGE */
+
+#main-options{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    height: auto;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 0 1 250px;
+    padding: 10% 5%;
+    margin: 2%;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: aqua;
+    color: black;
+}
+
+.option:hover{
+    background-color: blue;
+    color: white;
+}
