@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* BASIC PAGE CSS */
 * {
@@ -76,12 +77,13 @@ body{
     text-decoration: none;
     border-radius: 10px;
     background-color: rgb(245, 245, 245);
-    color: black;
+    color: #0e405f;
+    font-family: 'Jua', sans-serif;
 }
 
 .option:hover{
     background-color: rgb(255, 234, 113);
-    color: black;
+    color: #0e405f;
 }
 
 
