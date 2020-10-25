@@ -230,3 +230,14 @@ li a:hover {
 
     color: #256792 ;
 }
+
+#about-us{
+    text-align: center;
+    width: 50%;
+}
+
+#about-us div{
+
+    margin-top: 2%;
+}
+
