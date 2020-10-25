@@ -48,6 +48,11 @@ body{
     align-content: center;
     padding: 2%;
 }
+#center-title h1{
+
+    color: #256792;
+    padding: 3%;
+}
 
 #main-options{
     display: flex;
@@ -141,7 +146,7 @@ nav {
     right: 0;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -150,12 +155,12 @@ ul {
     text-align: right;
 }
 
-li {
+nav ul li {
     display: inline-block;
 
 }
 
-li a{
+nav ul li a{
     display: block;
     color: white;
     text-align: center;
@@ -208,4 +213,23 @@ li a:hover {
 
 .hidden{
     display: none;
+}
+
+#info-list ul{
+
+    
+    margin-left: 4%;
+    text-align: left;
+    list-style: square;
+
+}
+
+#info-list li{
+
+    margin-top: 2%;
+}
+
+#info-list h2{
+
+    color: #256792 ;
 }
