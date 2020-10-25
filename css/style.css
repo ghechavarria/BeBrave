@@ -135,7 +135,7 @@ nav {
     top: 0; 
     position: sticky;
     display: flex;
-    background-color: rgb(54, 76, 116);
+    background-color: #11527b;
     box-shadow: 0 3px 2px -2px rgb(27, 48, 77);
     left: 0;
     right: 0;
@@ -146,7 +146,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(54, 76, 116);
+    background-color: #11527b;
     text-align: right;
 }
 
@@ -165,7 +165,7 @@ li a{
 }
 
 li a:hover {
-    background-color: rgb(54, 76, 116);
+    background-color:#256792;
 }
 
 #scene{
@@ -200,8 +200,8 @@ li a:hover {
 
 .button:hover{
 
-    background-color: #3f7ea6;
-    color: white;
+    background-color: #BBDBF0;
+    /* color: white; */
   }
 
 
