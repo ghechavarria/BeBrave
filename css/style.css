@@ -120,14 +120,25 @@ footer{
     text-decoration: none;
 } */
 
+
+/* Navigation */
 a {
     text-decoration: none;
+}
+
+#logo{
+    margin-left: 1%;
+    color: #fff;
 }
 
 nav {
     top: 0; 
     position: sticky;
-
+    display: flex;
+    background-color: rgb(54, 76, 116);
+    box-shadow: 0 3px 2px -2px rgb(27, 48, 77);
+    left: 0;
+    right: 0;
 }
 
 ul {
@@ -135,7 +146,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(54, 76, 116);
     text-align: right;
 }
 
@@ -154,7 +165,7 @@ li a{
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: rgb(54, 76, 116);
 }
 
 #scene{
@@ -191,4 +202,21 @@ li a:hover {
 
     background-color: #3f7ea6;
     color: white;
+  }
+
+
+/* Scenario CSS */
+#right-answer p, #wrong-answer p{
+    width: 50%;
+}
+
+#right-answer, #wrong-answer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 1 50px;
+}
+
+#right-answer .button, #wrong-answer .button{
+    flex: 1;
 }
