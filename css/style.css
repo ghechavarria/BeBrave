@@ -136,10 +136,11 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    text-align: right;
 }
 
 li {
-    float: right;
+    display: inline-block;
 
 }
 
