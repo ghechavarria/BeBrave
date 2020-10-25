@@ -35,7 +35,7 @@ body{
     justify-content: center;
     align-items: center;
     align-content: center;
-    /* height: 100vh; */
+    padding-bottom: 2%;
     box-shadow: 0 4px 2px -2px rgb(196, 196, 196);
     color: #fff;
 }
