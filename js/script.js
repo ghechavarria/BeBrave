@@ -14,10 +14,20 @@ document.getElementByClass("github").onmouseover = function() {githubmouseOver()
 document.getElementByClass("github").onmouseout = function() {githubmouseOut()};
 
 function githubmouseOver() {
-    document.getElementById("github").src = "assets/icons/github2.svg";
+    if ( document.URL.includes("scenario1.html") || document.URL.includes("scenario2.html") || document.URL.includes("scenario3.html") ) {
+        //Code here
+        document.getElementById("github").src = "../../assets/icons/github2.svg";
+    }else{
+        document.getElementById("github").src = "assets/icons/github2.svg";
+    }
 }
 
 function githubmouseOut() {
-    document.getElementById("github").src = "assets/icons/github.svg"
+    if ( document.URL.includes("scenario1.html") || document.URL.includes("scenario2.html") || document.URL.includes("scenario3.html") ) {
+        //Code here
+        document.getElementById("github").src = "../../assets/icons/github.svg";
+    }else{
+        document.getElementById("github").src = "assets/icons/github.svg";
+    }
 }
 
