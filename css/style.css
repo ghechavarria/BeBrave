@@ -133,7 +133,8 @@ a {
 }
 
 #logo{
-    font-family: font-family: 'Righteous', cursive;
+    font-family: 'Righteous', cursive;
+    font-size: larger;
     margin-left: 0;
     color: #fff;
 }
