@@ -155,4 +155,40 @@ li a{
 
 li a:hover {
     background-color: #111;
-  }
+}
+
+#scene{
+
+    padding-top: 3%;
+    text-align: center;
+
+}
+
+#scene img{
+
+    margin-top: 2%;
+    border: 10px white;
+    border-style: solid;
+}
+
+#scene p{
+
+    width: 50%;
+
+}
+
+.button {
+
+    border-style: none;
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+    width: 42%;
+    border-radius: 15px;
+    
+}
+
+.button:hover{
+
+    background-color: #3f7ea6;
+    color: white;
+}
