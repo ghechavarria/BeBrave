@@ -206,4 +206,6 @@ li a:hover {
     /* color: white; */
   }
 
-
+.hidden{
+    display: none;
+}
