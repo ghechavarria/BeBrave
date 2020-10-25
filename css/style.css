@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* BASIC PAGE CSS */
 * {
     margin: auto;
@@ -132,8 +133,20 @@ a {
 }
 
 #logo{
-    margin-left: 1%;
+    font-family: font-family: 'Righteous', cursive;
+    margin-left: 0;
     color: #fff;
+}
+
+#logo a{
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 16px;
+    left: 0;
+}
+#logo a:hover{
+    color: #fff;
+
 }
 
 nav {
