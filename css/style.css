@@ -149,7 +149,7 @@ a {
 }
 #logo a:hover{
     color: #fff;
-
+    cursor: pointer;
 }
 
 nav {
@@ -187,8 +187,22 @@ nav ul li a{
 
 li a:hover {
     background-color:#256792;
+    cursor: pointer;
 }
 
+ul ul { /* lists within lists... */
+    position: absolute; /* place them over the top of everything */
+    display: none; /* hide 'em */
+}
+
+li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul ul li #cyber-subitem{
+    padding: 14px 24px;
+}
 
 /* Scenario CSS */
 #scene, #right-answer, #wrong-answer{
