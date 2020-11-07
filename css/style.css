@@ -212,7 +212,7 @@ li a:hover {
   }
 
 
-#info-list ul{
+.info-list ul{
 
     
     margin-left: 4%;
@@ -221,13 +221,14 @@ li a:hover {
 
 }
 
-#info-list li{
+.info-list li{
 
     margin-top: 2%;
 }
 
-#info-list h2{
+.info-list h2{
 
+    text-align: left;
     color: #256792 ;
 }
 
@@ -284,4 +285,39 @@ li a:hover {
 
 }
 
+.para-center a:link,a:visited{
+    color: white;
+    text-decoration: none;
 
+}
+
+.para-center a:hover, a:active{
+    
+    color: #256792;
+}
+
+.bully-list{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    width: 90%;
+    
+    
+}
+
+.info-list{
+
+    justify-content: center;
+    width: 50%;
+    margin: 2%;
+    flex: 0 1 400px;
+}
+
+b{
+
+    color: #256792;
+}
