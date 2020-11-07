@@ -4,18 +4,23 @@
         <meta charset="utf-8">
         <title>BeBrave</title>
         <!-- <link rel="icon" href="favicon.png" type="image/png" sizes="32x32"> -->
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../../css/style.css">
         <script src="../js/script.js"></script>
     </head>
     <body>
         <nav>
-            <div id="logo">BeBrave!</div>
+            <div id="logo"><a href="../index.html">BeBrave!</a></div>
             <ul>
                 <li>
                     <a href="../index.html">Home</a>
                 </li>
                 <li>
                     <a href="../info.html">Bullying</a>
+                    <ul class="dropdown">
+                        <li><a href="/physical_bully/scenario1.html">Physical</a></li>
+                        <li><a id="cyber-subitem" href="/online_bully/scenario1.html">Cyber</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="../about.html">About</a>
@@ -46,33 +51,27 @@
                     <p><b> What are you going to do? </b></p>
 
 
-                    <img src="../assets/yourFriendIsGettingBullied.jpg"  width="40%" height="40%">
+                    <img src="../assets/physical/yourFriendIsGettingBullied.jpg"  width="40%" height="40%">
 
-                    <form method="GET" action="">
-
-                        <input class="button" type="submit" value =" &quot;Why didn't you tell your parents? Or ask an adult to help you?&quot;"/>
-
-                    </form>
-                    <form method="GET" action="">
-
-                        <input class="button" type="submit" value ="&quot;Hey, I'm sorry to hear that! Thank you for telling me. Would you like to work this out together?&quot;"/>
-                        
-                    </form>
-
+                    <br>
+                    <input onclick="showWrong();" class="button" type="submit" value="&quot;Why didn't you tell your parents? Or ask an adult to help you?&quot;"/>
+                    <br>                  
+                    <input onclick="showCorrect();" class="button" type="submit" value="&quot;Hey, I'm sorry to hear that! Thank you for telling me. Would you like to work this out together?&quot;">
+                    
                 </div>
 
-                <div id="right-answer">
+                <div id="right-answer" class="hidden">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                    <img src="/assets/green_answer.png" width="40%" height="40%">
-                    <form method="GET" action="scenario2.html">
+                    <img src="/assets/physical/YourFriendIsGettingBulliedHAPPY.jpg" width="40%" height="40%">
+                    <form method="GET" action="../info.html">
                         <input class="button" type="submit" value="next">
                     </form>
                 </div>
 
-                <div id="wrong-answer">
+                <div id="wrong-answer" class="hidden">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                        <img src="/assets/red_answer.png" width="40%" height="40%">
-                    <form method="GET" action="scenario2.html">
+                        <img src="/assets/physical/YourFriendIsGettingBulliedSAD.jpg" width="40%" height="40%">
+                    <form method="GET" action="../info.html">
                         <input class="button" type="submit" value="next">
                     </form>
                 </div>
@@ -90,7 +89,7 @@
                   <p class="footerText">BeBrave Team &copy; 2020</p>
                   <p class="footerText">Shelly Penichet | Helen Anna Papanikolaou | Grace Hechavarria</p>
                   <div id="footerSocial"> 
-                      <a href="#" target="_blank"><img src="../assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
+                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank"><img src="../assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
                   </div>
                 </div>
                 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* BASIC PAGE CSS */
 * {
     margin: auto;
@@ -31,7 +33,7 @@ body{
     background-color: rgb(93, 154, 194);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -75,14 +77,20 @@ body{
     text-decoration: none;
     border-radius: 10px;
     background-color: rgb(245, 245, 245);
-    color: black;
+    color: #0e405f;
+    font-family: 'Jua', sans-serif;
 }
 
 .option:hover{
     background-color: rgb(255, 234, 113);
-    color: black;
+    color: #0e405f;
 }
 
+.logo-notnav{
+    font-family: 'Righteous', cursive;
+    font-size: 5em;
+    margin-bottom: 2%;
+}
 
 /*footer*/
 footer{
@@ -132,8 +140,21 @@ a {
 }
 
 #logo{
-    margin-left: 1%;
+    font-family: 'Righteous', cursive;
+    font-size: larger;
+    margin-left: 0;
     color: #fff;
+}
+
+#logo a{
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 16px;
+    left: 0;
+}
+#logo a:hover{
+    color: #fff;
+    cursor: pointer;
 }
 
 nav {
@@ -171,8 +192,23 @@ nav ul li a{
 
 li a:hover {
     background-color:#256792;
+    cursor: pointer;
 }
 
+ul ul { /* lists within lists... */
+    position: absolute; /* place them over the top of everything */
+    display: none; /* hide 'em */
+    box-shadow: 0 3px 2px -2px rgb(27, 48, 77);
+}
+
+li:hover ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul ul li #cyber-subitem{
+    padding: 14px 24px;
+}
 
 /* Scenario CSS */
 #scene, #right-answer, #wrong-answer{
@@ -211,6 +247,9 @@ li a:hover {
     /* color: white; */
   }
 
+.hidden{
+    display: none;
+}
 
 .info-list ul{
 
@@ -234,12 +273,19 @@ li a:hover {
 
 #about-us{
     text-align: center;
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 80%;
 }
 
 #about-us div{
-
     margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #about-us h3{
@@ -268,7 +314,7 @@ li a:hover {
 .para-center h2{
 
     color: #256792;
-    padding-bottom: 1%;
+    padding-bottom: 0.5%;
 
 }
 
@@ -320,4 +366,34 @@ li a:hover {
 b{
 
     color: #256792;
+}
+.about-member{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 350px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #3a6e9150;
+    margin: 0 2%;
+    padding: 2%;
+}
+
+.about-member img{
+    margin: 5% 0;
+    /* border-style: solid; */
+    /* border-color: #fff; */
+    /* border-width: 10px 10px 40px 10px; */
+}
+
+.about-member p{
+    width: 80%;
+    color:#fff;
+}
+
+.about-member h2{
+    color: #fff;
 }

@@ -5,17 +5,23 @@
         <title>BeBrave</title>
         <!-- <link rel="icon" href="favicon.png" type="image/png" sizes="32x32"> -->
         <link rel="stylesheet" type="text/css" href="../../css/style.css">
-        <script src="../js/script.js"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="../js/script.js"></script>
     </head>
     <body>
     
         <nav>
+            <div id="logo"><a href="../index.html">BeBrave!</a></div>
             <ul>
                 <li>
                     <a href="../index.html">Home</a>
                 </li>
                 <li>
                     <a href="../info.html">Bullying</a>
+                    <ul class="dropdown">
+                        <li><a href="/physical_bully/scenario1.html">Physical</a></li>
+                        <li><a id="cyber-subitem" href="/online_bully/scenario1.html">Cyber</a></li>
+                    </ul>
                 </li>
                 <li>
                     <a href="../about.html">About</a>
@@ -44,35 +50,28 @@
                         The older kid, Trevor, was known for bullying younger kids.
                     </p>
                     <br>
-                    <p> What are you going to do?</p>
-
-
-                    <img src="../assets/someoneGetsBullied.jpg" alt="someoneGetsBullied" width="40%" height="40%">
-
-                    <form method="GET" action="">
-
-                        <input class="button" type="submit" value="You choose to get an adult">
-
-                    </form>
-                    <form method="GET" action="">
-
-                        <input class="button" type="submit" value="You choose to ignore it and keep walking">
+                    <p><b>What are you going to do?</b></p>
+                    <img src="../assets/physical/SomeoneGetsBulliedSIGNED.jpg" alt="someoneGetsBullied" width="40%" height="40%">
+                    <br>
+                    <input onclick="showCorrect();" class="button" type="submit" value="You choose to get an adult">
+                    <br>                  
+                    <input onclick="showWrong();" class="button" type="submit" value="You choose to ignore it and keep walking">
                         
-                    </form>
+                    
 
                 </div>
 
-                <div id="right-answer">
+                <div id="right-answer" class="hidden">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                        <img src="/assets/green_answer.png" width="40%" height="40%">
+                        <img src="/assets/physical/SomeoneGetsBulliedHAPPY.jpg" width="40%" height="40%">
                         <form method="GET" action="scenario2.html">
                             <input class="button" type="submit" value="next">
                         </form>
                 </div>
 
-                <div id="wrong-answer">
+                <div id="wrong-answer" class="hidden">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                        <img src="/assets/red_answer.png" width="40%" height="40%">
+                        <img src="/assets/physical/SomeoneGetsBulliedREGRET.jpg" width="40%" height="40%">
                     <form method="GET" action="scenario2.html">
                         <input class="button" type="submit" value="next">
                     </form>
@@ -91,7 +90,7 @@
                   <p class="footerText">BeBrave Team &copy; 2020</p>
                   <p class="footerText">Shelly Penichet | Helen Anna Papanikolaou | Grace Hechavarria</p>
                   <div id="footerSocial"> 
-                      <a href="#" target="_blank"><img src="../assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
+                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank"><img src="../assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
                   </div>
                 </div>
                 
