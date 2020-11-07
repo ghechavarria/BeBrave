@@ -193,6 +193,7 @@ li a:hover {
 ul ul { /* lists within lists... */
     position: absolute; /* place them over the top of everything */
     display: none; /* hide 'em */
+    box-shadow: 0 3px 2px -2px rgb(27, 48, 77);
 }
 
 li:hover ul {
