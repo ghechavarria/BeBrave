@@ -331,13 +331,13 @@ ul ul li #cyber-subitem{
 
 }
 
-.para-center a:link,a:visited{
+.para-center a:link,.para-center a:visited{
     color: white;
     text-decoration: none;
 
 }
 
-.para-center a:hover, a:active{
+.para-center a:hover, .para-center a:active{
     
     color: #256792;
 }
