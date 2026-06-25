@@ -1,0 +1,11 @@
+# BeBrave! is a static HTML/CSS/JS site — no build step required.
+# Netlify was defaulting to Node 12, which broke the auto-enabled prerender
+# extension (its Puppeteer postinstall needs Node >= 18). Pin a modern Node.
+
+[build]
+  publish = "."
+  command = "echo 'Static site — nothing to build.'"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--no-optional"
