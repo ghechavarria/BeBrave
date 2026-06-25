@@ -6,13 +6,12 @@
 const POINTS_PER_CORRECT = 10;
 const TOTAL_STEPS = 3;
 const STORAGE_KEY = "bebrave_points";
-// matches /scenario1, /scenario1.html, /scenario1/ — Netlify "pretty URLs" drop the .html extension
-const SCENARIO_RE = /scenario([123])(?:\.html)?\/?$/;
+// matches scenario1 / scenario1.html / scenario1/ anywhere in the path (Netlify pretty URLs)
+const SCENARIO_STEP_RE = /scenario([123])(?:\.html)?(?:\/|$)/;
+
+const currentStep = () => Number(location.pathname.match(SCENARIO_STEP_RE)?.[1] || 1);
+
 const MOBILE_NAV_MQ = window.matchMedia("(max-width: 760px)");
-
-const isScenarioPage = () => SCENARIO_RE.test(location.pathname);
-
-const currentStep = () => Number(location.pathname.match(SCENARIO_RE)?.[1] || 1);
 
 const readPoints = () => parseInt(sessionStorage.getItem(STORAGE_KEY) || "0", 10) || 0;
 
