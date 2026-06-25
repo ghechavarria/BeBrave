@@ -6,7 +6,8 @@
 const POINTS_PER_CORRECT = 10;
 const TOTAL_STEPS = 3;
 const STORAGE_KEY = "bebrave_points";
-const SCENARIO_RE = /scenario([123])\.html$/;
+// matches /scenario1, /scenario1.html, /scenario1/ — Netlify "pretty URLs" drop the .html extension
+const SCENARIO_RE = /scenario([123])(?:\.html)?\/?$/;
 const MOBILE_NAV_MQ = window.matchMedia("(max-width: 760px)");
 
 const isScenarioPage = () => SCENARIO_RE.test(location.pathname);
@@ -196,6 +197,8 @@ if (document.readyState === "loading") {
 }
 
 function init() {
-    if (isScenarioPage()) initScenarioGame();
+    // initScenarioGame() self-guards on the #scene element, so it works regardless
+    // of how the URL is formatted (e.g. Netlify "pretty URLs" without .html)
+    initScenarioGame();
     initMobileNav();
 }
