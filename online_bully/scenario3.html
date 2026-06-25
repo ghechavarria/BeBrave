@@ -1,91 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>BeBrave</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Cyber bullying scenario 3: your best friend confides about fake online rumors. Make a brave, kind choice.">
+        <meta name="theme-color" content="#11385a">
+        <title>Cyber Bullying — Level 3 — BeBrave!</title>
         <!-- <link rel="icon" href="favicon.png" type="image/png" sizes="32x32"> -->
-        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../../css/style.css">
-        <script src="../js/script.js"></script>
+        <link rel="preload" as="image" href="../assets/cyber/placeholder.svg?v=5">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap">
+        <link rel="stylesheet" href="../css/style.css">
+        <script defer src="../js/script.js"></script>
     </head>
     <body>
-        <nav>
+        <nav aria-label="Main navigation">
             <div id="logo"><a href="../index.html">BeBrave!</a></div>
-            <ul>
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="../info.html">Bullying</a>
+            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="has-dropdown"><a href="../info.html">Bullying</a>
                     <ul class="dropdown">
                         <li><a href="/physical_bully/scenario1.html">Physical</a></li>
                         <li><a id="cyber-subitem" href="/online_bully/scenario1.html">Cyber</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="../about.html">About</a>
-                </li>
+                <li><a href="../about.html">About</a></li>
             </ul>
-            
         </nav>
 
-        <main>
+        <main id="main-content">
             <div id="main-landing">
-                <div id="center-title">
-                    <img src="../assets/huge.svg" width="40%" height="40%">
+                <div id="scene" class="game-stage">
+                    <img class="stage-img stage-img--placeholder" fetchpriority="high" decoding="async" src="../assets/cyber/placeholder.svg?v=5" alt="Your friend upset after reading hurtful messages online">
+                    <div class="stage-scrim"></div>
+                    <div class="stage-content">
+                        <div class="prompt-bubble">
+                            <p class="prompt-story">
+                                You go over to your best friend's house to hang out. When you walk into her room, she is
+                                crying at her laptop. Classmates have been spreading fake rumors about her online — saying
+                                she cheated on a test and copied homework. The messages are in a group chat she was removed
+                                from, and now kids at school are treating her differently. She asks, "What do I do?"
+                            </p>
+                            <p class="prompt-question">What are you going to do?</p>
+                        </div>
+                        <div class="answer-grid">
+                            <button type="button" class="answer" data-choice="wrong">
+                                <span class="answer-letter">A</span>
+                                <span class="answer-text">"Why didn't you just tell your parents right away?"</span>
+                            </button>
+                            <button type="button" class="answer" data-choice="correct">
+                                <span class="answer-letter">B</span>
+                                <span class="answer-text">"I'm really sorry this is happening. Thank you for telling me — let's figure out our next steps together."</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="scene">
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.
-                    </p>
-                    <br>
-                    <p><b> What are you going to do? </b></p>
-
-
-                    <img src="../assets/physical/yourFriendIsGettingBullied.jpg"  width="40%" height="40%">
-
-                    <br>
-                    <input onclick="showWrong();" class="button" type="submit" value="Sad"/>
-                    <br>                  
-                    <input onclick="showCorrect();" class="button" type="submit" value="Happy">
-                    
+                <div id="right-answer" class="hidden game-stage result-stage">
+                    <img class="stage-img stage-img--placeholder" loading="lazy" decoding="async" src="../assets/cyber/placeholder.svg?v=5" alt="You and your friend working together to address online rumors">
+                    <div class="stage-scrim"></div>
+                    <div class="stage-content">
+                        <div class="prompt-bubble">
+                            <p class="prompt-story">Supporting your friend without blame helps her feel less alone. You can help her save the messages and encourage her to talk to a trusted adult who can address the online rumors.</p>
+                        </div>
+                        <form method="GET" action="../info.html">
+                            <button type="submit" class="next-btn">Next &rarr;</button>
+                        </form>
+                    </div>
                 </div>
 
-                <div id="right-answer" class="hidden">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                    <img src="/assets/physical/YourFriendIsGettingBulliedHAPPY.jpg" width="40%" height="40%">
-                    <form method="GET" action="../info.html">
-                        <input class="button" type="submit" value="next">
-                    </form>
+                <div id="wrong-answer" class="hidden game-stage result-stage">
+                    <img class="stage-img stage-img--placeholder" loading="lazy" decoding="async" src="../assets/cyber/placeholder.svg?v=5" alt="Your friend feeling blamed after opening up">
+                    <div class="stage-scrim"></div>
+                    <div class="stage-content">
+                        <div class="prompt-bubble">
+                            <p class="prompt-story">Asking why she didn't speak up sooner can make her feel blamed for the bullying. She trusted you with something painful — kindness and teamwork matter more than judgment.</p>
+                        </div>
+                        <form method="GET" action="../info.html">
+                            <button type="submit" class="next-btn">Next &rarr;</button>
+                        </form>
+                    </div>
                 </div>
-
-                <div id="wrong-answer" class="hidden">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                        <img src="/assets/physical/YourFriendIsGettingBulliedSAD.jpg" width="40%" height="40%">
-                    <form method="GET" action="../info.html">
-                        <input class="button" type="submit" value="next">
-                    </form>
-                </div>
-                
-
             </div>
-
-            
         </main>
 
         <footer>
             <div class="footerContainer">
-
                 <div class="footerContent">
                   <p class="footerText">BeBrave Team &copy; 2020</p>
                   <p class="footerText">Shelly Penichet | Helen Anna Papanikolaou | Grace Hechavarria</p>
-                  <div id="footerSocial"> 
-                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank"><img src="../assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
+                  <div id="footerSocial">
+                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank" rel="noopener noreferrer" aria-label="BeBrave project on GitHub" class="footer-github-link"></a>
                   </div>
                 </div>
-                
               </div>
         </footer>
     </body>

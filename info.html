@@ -1,120 +1,297 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>BeBrave</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Learn what bullying and cyberbullying are, how to spot the warning signs, and safe, brave steps to take if it happens to you or a friend.">
+        <meta name="theme-color" content="#11385a">
+        <title>What is Bullying? — BeBrave!</title>
         <!-- <link rel="icon" href="favicon.png" type="image/png" sizes="32x32"> -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap">
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/script.js"></script>
     </head>
     <body>
-        <nav>
+        <nav aria-label="Main navigation">
             <div id="logo"><a href="index.html">BeBrave!</a></div>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="info.html">Bullying</a>
+            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown"><a href="info.html">Bullying</a>
                     <ul class="dropdown">
                         <li><a href="/physical_bully/scenario1.html">Physical</a></li>
                         <li><a id="cyber-subitem" href="/online_bully/scenario1.html">Cyber</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
 
-        <main>
-            <div id="main-landing">
-                <div id="center-title">
-                    <!-- <h1>BeBrave</h1> -->
-                    <img src="assets/empathy.svg" width="40%" height="40%">    
-
-                </div>
-                <h1 style="color: #256792; padding-bottom: 2%;">What is Bullying?</h1>
-                <div class="para-center">
-                    <p>CDC defines bullying as any unwanted aggressive behavior(s) by another youth or group of youths, 
-                        who are not siblings or current dating partners, that involves an observed or perceived power imbalance, 
-                        and is repeated multiple times or is highly likely to be repeated. 
-                        Bullying may inflict harm or distress on the targeted youth including physical, psychological, social, or educational harm.
-                    </p>
-
-                </div>
-                <div class="bully-list">
-                    <div class="info-list">
-
-                        <h2>Common Types of Bullying Include</h2>
-                        <ul>
-                            <li>Physical such as hitting, kicking, and tripping</li>
-                            <li>Verbal including name-calling and teasing</li>
-                            <li>Relational/social such as spreading rumors and leaving out of the group</li>
-                            <li>Damage to property of the victim</li>
-                        </ul>
+        <main id="main-content">
+            <div id="main-landing" class="info-page">
+                <header class="info-hero">
+                    <div id="center-title">
+                        <img src="assets/empathy.svg" alt="Two children sharing a heart, showing kindness and empathy">
                     </div>
-                    <div class="info-list">
-                        <h2>What to Do If You're Bullied</h2>
-                        <ul>
-                            <li>Look at the kid bullying you and tell him or her to stop in a calm,
-                                 clear voice. You can also try to laugh it off. This works best 
-                                 if joking is easy for you. 
-                                It could catch the kid bullying you off guard.</li>
-                            <li>If speaking up seems too hard or not safe, walk away and stay away. Don’t fight back. 
-                                Find an adult to stop the bullying on the spot.</li>
-                        </ul>
+                    <h1 class="section-title">What is Bullying?</h1>
+                    <span class="info-eyebrow">Recognize | Respond | Stay Safe</span>
+                </header>
+
+                <section class="info-section">
+                    <div class="info-callout">
+                        <p>The CDC defines bullying as any unwanted aggressive behavior(s) by another youth or group of youths,
+                            who are not siblings or current dating partners, that involves an observed or perceived power imbalance,
+                            and is repeated multiple times or is highly likely to be repeated.
+                            Bullying may inflict harm or distress on the targeted youth including physical, psychological, social, or educational harm.
+                        </p>
+                        <p>Bullying is <b>not</b> a one-time argument, a single mean joke between friends, or ordinary teasing that both people find funny.
+                            It is repeated, hurtful, and makes someone feel unsafe or powerless. It can happen at school, in your neighborhood,
+                            on the bus, or online through phones and social media.</p>
                     </div>
-                    <div class="info-list">
-                        <h2>To Stay Safe In The Future</h2>
-                        <ul>
-                            <li>Talk to an adult you trust. Don’t keep your feelings inside. Telling someone can help you feel less alone. 
-                                They can help you make a plan to stop the bullying.</li>
-                            <li>Stay away from places where bullying happens.</li>
-                            <li>Stay near adults and other kids. Most bullying happens when adults aren’t around.</li>
-                        </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2 class="info-subhead">Common Types of Bullying</h2>
+                    <div class="fact-grid fact-grid--rows">
+                        <div class="fact-grid-row">
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">👊</span>
+                            <h3>Physical</h3>
+                            <p>Hitting, kicking, tripping, or damaging someone's belongings</p>
+                        </article>
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">💬</span>
+                            <h3>Verbal</h3>
+                            <p>Name-calling, insults, threats, or cruel teasing</p>
+                        </article>
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">👥</span>
+                            <h3>Relational / social</h3>
+                            <p>Spreading rumors, embarrassing someone, or leaving them out on purpose</p>
+                        </article>
+                        </div>
+                        <div class="fact-grid-row">
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">🎒</span>
+                            <h3>Property damage</h3>
+                            <p>Stealing, hiding, or breaking things that belong to the victim</p>
+                        </article>
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">📱</span>
+                            <h3>Cyber / online</h3>
+                            <p>Hurtful messages, posts, photos, or exclusion through texts, games, or social media</p>
+                        </article>
+                        </div>
                     </div>
+                </section>
 
-                </div>
+                <section class="info-section">
+                    <h2 class="info-subhead">Warning Signs</h2>
+                    <ul class="check-grid is-warning">
+                        <li class="check-item">Feeling anxious, sad, or angry before or after school</li>
+                        <li class="check-item">Not wanting to go to school, ride the bus, or hang out with certain people</li>
+                        <li class="check-item">Unexplained bruises, torn clothes, or missing belongings</li>
+                        <li class="check-item">Sudden changes in mood, sleep, grades, or eating habits</li>
+                        <li class="check-item">Withdrawing from friends, family, or activities they used to enjoy</li>
+                    </ul>
+                </section>
 
-                <div class="para-center">
-                    <h2>Stand Up for Others</h2>
-                    <p>When you see bullying, there are safe things you can do to make it stop.
-                        Talk to a parent, teacher, or another adult you <b>trust</b>. Adults need to know when bad things happen so they can help.
-                        <b>Be kind</b> to the kid being bullied. Show them that you care by trying to include them. 
-                        Sit with them at lunch or on the bus, talk to them at school, or invite them to do something. 
-                        Just hanging out with them will help them know they aren’t alone. 
-                        <b>Not saying anything could make it worse</b> for everyone. The kid who is bullying will think it is ok to keep treating others that way.</p>
-                </div>
-                
-                <div class="para-center">
-                    <h2>Resources</h2>
-                    <p>
-                        <a href="https://www.stopbullying.gov/resources/kids" target="_blank">Kid's Resources</a>
-                        <a href="https://www.stopbullying.gov/resources/teens" target="_blank">Teen's Resources</a>
-                    </p>
+                <section class="info-section">
+                    <h2 class="info-subhead">What to Do If You're Bullied</h2>
+                    <ol class="steps">
+                        <li class="step">
+                            <p>Look at the kid bullying you and tell them to stop in a calm, clear voice.
+                                If joking comes naturally to you, laughing it off can sometimes catch a bully off guard.</p>
+                        </li>
+                        <li class="step">
+                            <p>If speaking up feels too hard or unsafe, walk away and stay away. Don't fight back.
+                                Find an adult to stop the bullying on the spot.</p>
+                        </li>
+                        <li class="step">
+                            <p>Tell a parent, teacher, counselor, or another adult you <b>trust</b>. You don't have to handle it alone.</p>
+                        </li>
+                        <li class="step">
+                            <p>Write down what happened — who was involved, where, when, and what was said or done.
+                                This helps adults take action.</p>
+                        </li>
+                    </ol>
+                </section>
 
+                <section class="info-section">
+                    <h2 class="info-subhead">To Stay Safe In The Future</h2>
+                    <ol class="steps">
+                        <li class="step">
+                            <p>Talk to an adult you trust. Don't keep your feelings inside. Telling someone can help you feel less alone.
+                                They can help you make a plan to stop the bullying.</p>
+                        </li>
+                        <li class="step">
+                            <p>Stay away from places where bullying happens when you can.</p>
+                        </li>
+                        <li class="step">
+                            <p>Stay near adults and other kids. Most bullying happens when adults aren't around.</p>
+                        </li>
+                        <li class="step">
+                            <p>Build friendships with people who treat you with respect. Having allies makes a real difference.</p>
+                        </li>
+                    </ol>
+                </section>
 
+                <section class="info-section info-section--major">
+                    <div class="info-illustration">
+                        <img src="assets/hug.svg" alt="Two friends sharing a comforting hug">
+                    </div>
+                    <h1 class="section-title">Online &amp; Cyber Bullying</h1>
+                    <span class="info-eyebrow">It Can be Just as Harmful as Physical Bullying</span>
+                    <div class="info-callout">
+                        <p><b>Cyberbullying</b> is bullying that happens through technology — texts, group chats, social media, online games,
+                            live streams, or any app where people connect. Because phones and computers are part of daily life,
+                            online bullying can follow you home and feel harder to escape than bullying that only happens in person.</p>
+                        <p>It is still bullying when it is repeated, one-sided, and meant to hurt or control someone.
+                            <b>It is never your fault</b> if someone targets you online.</p>
+                    </div>
+                </section>
 
-                </div>
+                <section class="info-section">
+                    <h2 class="info-subhead">Common Forms Online</h2>
+                    <ul class="check-grid">
+                        <li class="check-item">Mean or threatening texts, DMs, or comments</li>
+                        <li class="check-item">Posting or sharing embarrassing photos, videos, or screenshots without permission</li>
+                        <li class="check-item">Spreading rumors or lies in group chats or on social media</li>
+                        <li class="check-item">Creating fake accounts or impersonating someone to embarrass them</li>
+                        <li class="check-item">Leaving someone out of group chats or game parties on purpose</li>
+                        <li class="check-item">Sharing private information (doxxing) to scare or humiliate someone</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2 class="info-subhead">Signs of Cyberbullying</h2>
+                    <ul class="check-grid is-warning">
+                        <li class="check-item">Getting upset, anxious, or withdrawn after using a phone or computer</li>
+                        <li class="check-item">Hiding screens, deleting messages quickly, or refusing to talk about what happened online</li>
+                        <li class="check-item">Unexpected changes in how often someone texts, posts, or plays online</li>
+                        <li class="check-item">Receiving a flood of notifications or being tagged in hurtful posts</li>
+                        <li class="check-item">Not wanting to go to school because of something that started online</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2 class="info-subhead">What to Do Online</h2>
+                    <ol class="steps">
+                        <li class="step">
+                            <p><b>Don't respond</b> to hurtful messages. Replying can make things worse and gives the bully attention.</p>
+                        </li>
+                        <li class="step">
+                            <p><b>Save evidence</b> — screenshots, links, usernames, dates, and times. Adults and platforms need proof.</p>
+                        </li>
+                        <li class="step">
+                            <p><b>Block and report</b> on the app or game. Most platforms have tools to flag abusive content.</p>
+                        </li>
+                        <li class="step">
+                            <p><b>Tell a trusted adult</b> — a parent, teacher, or counselor. They can help report it and keep you safe.</p>
+                        </li>
+                        <li class="step">
+                            <p><b>Protect your accounts</b> — use strong passwords, review privacy settings, and think before you share personal info.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="info-section">
+                    <h2 class="info-subhead">How It Differs From Physical Bullying</h2>
+                    <div class="fact-grid fact-grid--rows">
+                        <div class="fact-grid-row">
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">🕒</span>
+                            <h3>It can happen 24/7</h3>
+                            <p>Not only at school or on the bus</p>
+                        </article>
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">📢</span>
+                            <h3>The audience can be huge</h3>
+                            <p>Posts and rumors can spread fast to people you don't even know</p>
+                        </article>
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">♾️</span>
+                            <h3>It can feel permanent</h3>
+                            <p>Screenshots and reposts may not disappear even if the original is deleted</p>
+                        </article>
+                        </div>
+                        <div class="fact-grid-row">
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">🎭</span>
+                            <h3>Bullies may hide</h3>
+                            <p>Fake names and accounts can make it harder to know who is responsible</p>
+                        </article>
+                        <article class="fact-card">
+                            <span class="fact-icon" aria-hidden="true">🛡️</span>
+                            <h3>But you have tools too</h3>
+                            <p>Evidence can be saved, accounts can be blocked, and adults can help get harmful content removed</p>
+                        </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info-section">
+                    <div class="info-callout is-feature">
+                        <h2 class="callout-title"><span class="fact-icon" aria-hidden="true">🤝</span> Stand Up for Others</h2>
+                        <p>When you see bullying — in person or online — there are safe things you can do to help it stop.
+                            Talk to a parent, teacher, or another adult you <b>trust</b>. Adults need to know when bad things happen so they can help.
+                            <b>Be kind</b> to the person being bullied. Show them that you care by trying to include them.
+                            Sit with them at lunch or on the bus, talk to them at school, or invite them to do something.
+                            Online, you can refuse to like or share hurtful posts and send a private message of support.
+                            Just hanging out with them will help them know they aren't alone.
+                            <b>Not saying anything could make it worse</b> for everyone. The person bullying will think it is ok to keep treating others that way.</p>
+                    </div>
+                </section>
+
+                <section class="info-section">
+                    <div class="info-cta">
+                        <h2>Practice What You Learn</h2>
+                        <p>Ready to test your choices? Try our interactive scenarios and earn Bravery Points along the way.</p>
+                        <div class="info-btn-row">
+                            <a class="info-btn" href="/physical_bully/scenario1.html">Physical Bullying Scenarios</a>
+                            <a class="info-btn is-accent" href="/online_bully/scenario1.html">Cyber Bullying Scenarios</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info-section">
+                    <h2 class="info-subhead">Resources</h2>
+                    <div class="resource-grid">
+                        <a class="resource-card" href="https://www.stopbullying.gov/resources/kids" target="_blank" rel="noopener noreferrer">
+                            <span class="resource-name">Kid's Resources</span>
+                            <span class="resource-host">stopbullying.gov</span>
+                            <span class="resource-go">Open →</span>
+                        </a>
+                        <a class="resource-card" href="https://www.stopbullying.gov/resources/teens" target="_blank" rel="noopener noreferrer">
+                            <span class="resource-name">Teen's Resources</span>
+                            <span class="resource-host">stopbullying.gov</span>
+                            <span class="resource-go">Open →</span>
+                        </a>
+                        <a class="resource-card" href="https://www.stopbullying.gov/cyberbullying/what-is-it" target="_blank" rel="noopener noreferrer">
+                            <span class="resource-name">Cyberbullying Info</span>
+                            <span class="resource-host">stopbullying.gov</span>
+                            <span class="resource-go">Open →</span>
+                        </a>
+                    </div>
+                </section>
             </div>
-
-            
-
-
         </main>
 
         <footer>
             <div class="footerContainer">
-
                 <div class="footerContent">
                   <p class="footerText">BeBrave Team &copy; 2020</p>
                   <p class="footerText">Shelly Penichet | Helen Anna Papanikolaou | Grace Hechavarria</p>
-                  <div id="footerSocial"> 
-                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank"><img src="assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
+                  <div id="footerSocial">
+                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank" rel="noopener noreferrer" aria-label="BeBrave project on GitHub" class="footer-github-link"></a>
                   </div>
                 </div>
-                
               </div>
         </footer>
     </body>

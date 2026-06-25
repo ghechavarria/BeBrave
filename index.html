@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>BeBrave</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="BeBrave! is a friendly, kid-friendly site that helps kids understand bullying and practice brave, kind choices through interactive scenarios.">
+        <meta name="theme-color" content="#11385a">
+        <title>BeBrave! — Brave choices against bullying</title>
         <!-- <link rel="icon" href="favicon.png" type="image/png" sizes="32x32"> -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap">
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/script.js"></script>
     </head>
     <body>
-        <nav>
+        <nav aria-label="Main navigation">
             <div id="logo"><a href="index.html">BeBrave!</a></div>
-            <ul>
+            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="info.html">Bullying</a>
+                <li class="has-dropdown"><a href="info.html">Bullying</a>
                     <ul class="dropdown">
                         <li><a href="/physical_bully/scenario1.html">Physical</a></li>
                         <li><a id="cyber-subitem" href="/online_bully/scenario1.html">Cyber</a></li>
@@ -22,24 +33,24 @@
             </ul>
         </nav>
         
-        <main>
+        <main id="main-content">
             <div id="main-landing">
                 <div id="center-title">
-                    <!-- <h1>BeBrave</h1> -->
-                    <img src="assets/self-awareness.svg" width="40%" height="40%">        
+                    <img src="assets/self-awareness.svg" fetchpriority="high" decoding="async" alt="BeBrave character looking in a mirror">
                 </div>
                 <h1 class="logo-notnav">BeBrave!</h1>
+                <p class="hero-tagline">Choose your adventure — learn, play, and earn Bravery Points!</p>
                 <section id="main-options">
-                    <!-- First Box -->
-                    <a href="info.html" class="option">
+                    <a href="info.html" class="option option-learn">
+                        <span class="option-badge">Learn</span>
                         <h2>What is<br>Bullying?</h2>
                     </a>
-                    <!-- Second Box -->
                     <a href="/physical_bully/scenario1.html" class="option">
+                        <span class="option-badge">Level 1–3</span>
                         <h2>Physical<br>Bullying</h2>
                     </a>
-                    <!-- Third Box -->
                     <a href="/online_bully/scenario1.html" class="option">
+                        <span class="option-badge">Level 1–3</span>
                         <h2>Cyber<br>Bullying</h2>
                     </a>
                 </section>
@@ -55,7 +66,7 @@
                   <p class="footerText">BeBrave Team &copy; 2020</p>
                   <p class="footerText">Shelly Penichet | Helen Anna Papanikolaou | Grace Hechavarria</p>
                   <div id="footerSocial"> 
-                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank"><img src="assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
+                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank" rel="noopener noreferrer" aria-label="BeBrave project on GitHub" class="footer-github-link"></a>
                   </div>
                 </div>
                 
