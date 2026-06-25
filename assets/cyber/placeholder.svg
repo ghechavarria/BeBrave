@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Art coming soon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4faa46"/>
+      <stop offset="45%" stop-color="#3f9e74"/>
+      <stop offset="100%" stop-color="#3d8bd4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bubble" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#0d3a2c" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- chat bubble lifted toward the upper area so it sits above the prompt box -->
+  <g filter="url(#soft)">
+    <path d="M330 168h140a18 18 0 0 1 18 18v52a18 18 0 0 1-18 18H398l-30 26a4 4 0 0 1-6.7-3V256H330a18 18 0 0 1-18-18v-52a18 18 0 0 1 18-18z"
+          fill="url(#bubble)" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.6"/>
+  </g>
+
+  <text x="400" y="208" text-anchor="middle" font-family="'Poppins','Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#1b6e54" letter-spacing="0.3">Art coming</text>
+  <text x="400" y="234" text-anchor="middle" font-family="'Poppins','Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#1b6e54" letter-spacing="0.3">soon</text>
+</svg>

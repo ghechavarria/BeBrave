@@ -1,96 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>BeBrave</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Cyber bullying scenario 1: you see mean comments on a classmate's post. Make a brave choice and earn Bravery Points.">
+        <meta name="theme-color" content="#11385a">
+        <title>Cyber Bullying — Level 1 — BeBrave!</title>
         <!-- <link rel="icon" href="favicon.png" type="image/png" sizes="32x32"> -->
-        <link rel="stylesheet" type="text/css" href="../../css/style.css">
-        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preload" as="image" href="../assets/cyber/placeholder.svg?v=5">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&family=Fredoka:wght@600;700&family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap">
+        <link rel="stylesheet" href="../css/style.css">
         <script defer src="../js/script.js"></script>
     </head>
     <body>
-    
-        <nav>
+        <nav aria-label="Main navigation">
             <div id="logo"><a href="../index.html">BeBrave!</a></div>
-            <ul>
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="../info.html">Bullying</a>
+            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="has-dropdown"><a href="../info.html">Bullying</a>
                     <ul class="dropdown">
                         <li><a href="/physical_bully/scenario1.html">Physical</a></li>
                         <li><a id="cyber-subitem" href="#">Cyber</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="../about.html">About</a>
-                </li>
+                <li><a href="../about.html">About</a></li>
             </ul>
-            
         </nav>
 
-      
-        
-
-        <main>
-            
+        <main id="main-content">
             <div id="main-landing">
-                
-                <div id="center-title">
-                    <img src="../assets/scaredgirl.svg" width="40%" height="40%">
+                <div id="scene" class="game-stage">
+                    <img class="stage-img stage-img--placeholder" fetchpriority="high" decoding="async" src="../assets/cyber/placeholder.svg?v=5" alt="Mean comments on a classmate's social media post">
+                    <div class="stage-scrim"></div>
+                    <div class="stage-content">
+                        <div class="prompt-bubble">
+                            <p class="prompt-story">
+                                After school you open your phone and scroll through your class feed. Jorge, a classmate
+                                who moved in this year, posted a picture from the science fair. In the comments,
+                                Trevor and a few older students are making cruel jokes about Jorge's accent and telling
+                                people not to be friends with him. Jorge hasn't replied, but his last post makes it
+                                clear he is upset.
+                            </p>
+                            <p class="prompt-question">What are you going to do?</p>
+                        </div>
+                        <div class="answer-grid">
+                            <button type="button" class="answer" data-choice="correct">
+                                <span class="answer-letter">A</span>
+                                <span class="answer-text">You screenshot the comments and tell a trusted adult at school</span>
+                            </button>
+                            <button type="button" class="answer" data-choice="wrong">
+                                <span class="answer-letter">B</span>
+                                <span class="answer-text">You keep scrolling — it is not your problem</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="scene">
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.
-                    </p>
-                    <br>
-                    <p><b>What are you going to do?</b></p>
-                    <img src="../assets/physical/SomeoneGetsBulliedSIGNED.jpg" alt="someoneGetsBullied" width="40%" height="40%">
-                    <br>
-                    <input onclick="showCorrect();" class="button" type="submit" value="Happy">
-                    <br>                  
-                    <input onclick="showWrong();" class="button" type="submit" value="Sad">
-                        
-                    
-
-                </div>
-
-                <div id="right-answer" class="hidden">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                        <img src="/assets/physical/SomeoneGetsBulliedHAPPY.jpg" width="40%" height="40%">
+                <div id="right-answer" class="hidden game-stage result-stage">
+                    <img class="stage-img stage-img--placeholder" loading="lazy" decoding="async" src="../assets/cyber/placeholder.svg?v=5" alt="Jorge receiving support after cyberbullying is reported">
+                    <div class="stage-scrim"></div>
+                    <div class="stage-content">
+                        <div class="prompt-bubble">
+                            <p class="prompt-story">Reporting cyberbullying helps protect Jorge and shows him he is not alone. A trusted adult can address the harm and help stop it from spreading online.</p>
+                        </div>
                         <form method="GET" action="scenario2.html">
-                            <input class="button" type="submit" value="next">
+                            <button type="submit" class="next-btn">Next &rarr;</button>
                         </form>
+                    </div>
                 </div>
 
-                <div id="wrong-answer" class="hidden">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum tellus eu purus dictum, id varius ante sagittis. Donec in tellus augue. Nullam faucibus ex et ullamcorper accumsan. Ut eu mi ipsum. Nunc facilisis euismod erat, a tristique leo sagittis in. Cras odio felis, mollis in nisi in, accumsan eleifend neque.</p>
-                        <img src="/assets/physical/SomeoneGetsBulliedREGRET.jpg" width="40%" height="40%">
-                    <form method="GET" action="scenario2.html">
-                        <input class="button" type="submit" value="next">
-                    </form>
+                <div id="wrong-answer" class="hidden game-stage result-stage">
+                    <img class="stage-img stage-img--placeholder" loading="lazy" decoding="async" src="../assets/cyber/placeholder.svg?v=5" alt="Jorge alone and upset while mean comments go unaddressed">
+                    <div class="stage-scrim"></div>
+                    <div class="stage-content">
+                        <div class="prompt-bubble">
+                            <p class="prompt-story">Ignoring mean comments lets bullies think their behavior is okay. Jorge might feel even more isolated when no one speaks up for him.</p>
+                        </div>
+                        <form method="GET" action="scenario2.html">
+                            <button type="submit" class="next-btn">Next &rarr;</button>
+                        </form>
+                    </div>
                 </div>
-
             </div>
-
-            
-            
         </main>
 
         <footer>
             <div class="footerContainer">
-
                 <div class="footerContent">
                   <p class="footerText">BeBrave Team &copy; 2020</p>
                   <p class="footerText">Shelly Penichet | Helen Anna Papanikolaou | Grace Hechavarria</p>
-                  <div id="footerSocial"> 
-                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank"><img src="../assets/icons/github.svg" width="1.5%" height="1.5%" id="github" onmouseover="githubmouseOver();" onmouseout="githubmouseOut();"></a>
+                  <div id="footerSocial">
+                      <a href="https://github.com/Shelzer101/BeBrave" target="_blank" rel="noopener noreferrer" aria-label="BeBrave project on GitHub" class="footer-github-link"></a>
                   </div>
                 </div>
-                
               </div>
         </footer>
     </body>
